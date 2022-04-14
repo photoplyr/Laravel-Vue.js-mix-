@@ -1,0 +1,49 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "require": {
+        "laravelcollective/html": "^6.0"
+    },
+    "devDependencies": {
+        "axios": "^0.19",
+        "bootstrap": "^4.0.0",
+        "cross-env": "^7.0",
+        "jquery": "^3.2",
+        "jquery-form": "^4.2.2",
+        "dateformat": "^3.0.3",
+        "jsonfile": "^6.0.1",
+        "jsonwebtoken": "^8.5.1",
+        "laravel-mix": "^5.0.1",
+        "lodash": "^4.17.19",
+        "popper.js": "^1.12",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.20.1",
+        "sass-loader": "^8.0.0",
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "@mailchimp/mailchimp_transactional": "^1.0.46",
+        "highcharts": "^8.2.2",
+        "jsonwebtoken": "^8.5.1",
+        "materialize-css": "^1.0.0-rc.2",
+        "md5": "^2.3.0",
+        "moment": "^2.29.1",
+        "mysql": "^2.18.1",
+        "node-geocoder": "^3.27.0",
+        "pg": "^8.7.1",
+        "pug": "^3.0.2",
+        "stripe": "^8.183.0",
+        "vue-advanced-cropper": "^1.9.0",
+        "vue-highcharts": "^0.2.0",
+        "vuejs-paginate": "^2.1.0"
+    }
+}

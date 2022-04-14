@@ -1,0 +1,443 @@
+#memberDashboard__challenges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  background: $white;
+  min-height: calc(100vh - 166px);
+  .challengeDashboard__left {
+    width: 65%;
+    .page-title {
+        margin-top: 1.5rem;
+    }
+    .challenge-calendar {
+      padding-top: 1.5rem;
+      span {
+        color: $font-disable;
+        font-weight: 500;
+      }
+      .month-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        span.challenge-month {
+          position: relative;
+          font-weight: 400;
+          margin-right: 8px;
+          cursor: pointer;
+          &:hover {
+            color: $font-active;
+            font-weight: 700;
+          }
+          &.active {
+            color: $font-active;
+            font-weight: 700;
+          }
+          .material-icons {
+            vertical-align: middle;
+          }
+          .challenge-month-panel {
+            position: absolute;
+            right: 0;
+            background: white;
+            padding: 1rem;
+            border-radius: 4px;
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            span {
+              margin: 4px 12px;
+            }
+          }
+        }
+      }
+    }
+    .tabs {
+      &.tabs-transparent {
+        .tab {
+          text-transform: capitalize;
+          a {
+            font-size: 1rem;
+            font-weight: 700;
+            color: $font-disable;
+            padding-left: 0px;
+
+            &.active {
+              color: $font-active;
+            }
+            &:focus {
+              background: transparent;
+            }
+            &:hover {
+              color: $font-active;
+            }
+          }
+        }
+
+      }
+    }
+    .new-challenge {
+      height: 48px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #000000;
+      line-height: 48px;
+    }
+    .card-container {
+      max-height: 800px;
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .scroll-content{
+        /*column-width: 20rem;
+        column-gap: 1rem;
+      -moz-column-width: 20rem;
+      -webkit-column-width: 20rem;
+      -moz-column-gap: 1rem;
+      -webkit-column-gap: 1rem;*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .card {
+          display: inline-block;
+          width: 49%;
+          min-width: 300px;
+          background-position: center;
+          cursor: pointer;
+          &.active {
+            border: 2px solid red;
+          }
+          .card-content {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+
+            .card-title {
+              font-weight: 400;
+              margin: 1rem 0rem;
+              color: $white;
+            }
+            .date-panel {
+              background: $white;
+              padding: 2px 5px;
+              border-radius: 3px;
+              font-size: 12px;
+              color: $font-disable;
+            }
+            p.challenge-description {
+              color: $white;
+              font-size: 14px;
+            }
+            .challenge-participants {
+
+              margin-top: 2rem;
+              .participants-title {
+                color: $white;
+                text-transform: uppercase;
+                font-size: 13px;
+              }
+              .participants-photos {
+                display: flex;
+                margin-top: 1rem;
+                margin-bottom: 4rem;
+                .participant-photo {
+                  margin-right: 10px;
+                  img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    box-shadow: grey 0 0 1px;
+                  }
+                  span {
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+                    background: $white;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: grey 0 0 1px;
+                    border-radius: 50%;
+                  }
+                }
+              }
+            }
+
+          }
+          button {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 999;
+            cursor: pointer;
+            background: white;
+            color: black;
+            border-radius: 18px;
+            padding: 0px 2rem;
+            text-transform: capitalize;
+            font-weight: 600;
+            display: none;
+          }
+          &:hover {
+            .hover-view {
+              display: block;
+            }
+          }
+          .edit-challenge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: none;
+            a {
+              font-size: 18px;
+              font-weight: 600;
+              color: $white;
+            }
+          }
+          .delete-challenge {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .challengeDashboard__right {
+    width: 34%;
+    .content {
+      background: #f9fafb;
+      padding: 2rem 1rem;
+      height: 100%;
+      font-weight: 600;
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top:0;
+      }
+      .newChallenge_right {
+        color: $font-disable;
+        padding-top: 100px;
+        text-align: center;
+        width: 100%;
+        .card {
+          display: inline-block;
+          background-position: center;
+          cursor: pointer;
+          text-align: left;
+          width: 100%;
+          &.active {
+            border: 2px solid red;
+          }
+          .card-content {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+
+            .card-title {
+              font-weight: 400;
+              margin: 1rem 0rem;
+              color: $white;
+            }
+            .date-panel {
+              background: $white;
+              padding: 2px 5px;
+              border-radius: 3px;
+              font-size: 12px;
+              color: $font-disable;
+            }
+            p.challenge-description {
+              color: $white;
+              font-size: 14px;
+              font-weight: normal;
+            }
+            .challenge-participants {
+
+              margin-top: 2rem;
+              .participants-title {
+                color: $white;
+                text-transform: uppercase;
+                font-size: 13px;
+              }
+              .participants-photos {
+                display: flex;
+                margin-top: 1rem;
+                margin-bottom: 4rem;
+                .participant-photo {
+                  margin-right: 10px;
+                  img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    box-shadow: grey 0 0 1px;
+                  }
+                  span {
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+                    background: $white;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: grey 0 0 1px;
+                    border-radius: 50%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .btn-all-view {
+        color: $font-active;
+      }
+      .challenge-member-list {
+        &.view-all {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            background-color: #f5f5f5;
+            cursor: pointer;
+          }
+          &::-webkit-scrollbar {
+            cursor: pointer;
+            width: 6px;
+            background-color: #f5f5f5;
+            display: none;
+          }
+          &:hover::-webkit-scrollbar {
+            display: block;
+          }
+          &:hover {
+            -ms-overflow-style: scrollbar;
+            scrollbar-width: auto;
+          }
+          &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #555;
+            cursor: pointer;
+          }
+          overflow-y: auto;
+          max-height: 300px;
+        }
+        padding-left: 1rem;
+        .challenge-member {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1rem;
+          &:first-child {
+            background: $white;
+            span.trophy-icon {
+              margin: 0px 0px 0px -15px;
+              img {
+                margin: 0px;
+              }
+            }
+          }
+          &:nth-child(2), &:nth-child(3) {
+            span.trophy-icon {
+              margin: 0px 0px 0px -15px;
+              img {
+                margin: 0px;
+              }
+            }
+          }
+          img {
+            vertical-align: middle;
+            margin: 0px 8px;
+            &.member-photo {
+              box-shadow: gray 0 0 2px;
+              border-radius: 50%;
+            }
+          }
+          span {
+            margin-right: 8px;
+            vertical-align: middle;
+          }
+        }
+      }
+      .activity-block-box {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+          border-radius: 10px;
+          background-color: #f5f5f5;
+          cursor: pointer;
+        }
+        &::-webkit-scrollbar {
+          cursor: pointer;
+          height: 6px;
+          background-color: #f5f5f5;
+          display: none;
+        }
+        &:hover::-webkit-scrollbar {
+          display: block;
+        }
+        &:hover {
+          -ms-overflow-style: scrollbar;
+          scrollbar-width: auto;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+          background-color: #555;
+          cursor: pointer;
+        }
+        overflow: auto;
+        .activity-block-panel {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          width: 630px;
+
+          .activity-block {
+            min-width: 120px;
+            padding: 6px 4px;
+            font-size: 11px;
+            font-weight: 200;
+            color: $white;
+            margin-bottom: 8px;
+            .activity-block-header {
+              display: block;
+
+              .material-icons {
+                font-size: 20px;
+                vertical-align: middle;
+              }
+            }
+            p {
+              text-align: center;
+              margin: 4px;
+              line-height: 1.3;
+              span {
+                font-size: 2rem;
+                font-weight: 400;
+                vertical-align: sub;
+                margin-right: 4px;
+              }
+            }
+          }
+        }
+      }
+      .activity-steps {
+        color: $font-active;
+        margin-bottom: 0;
+      }
+      .activity-target-steps {
+        color: $font-disable;
+        margin-top: 0;
+      }
+    }
+  }
+}

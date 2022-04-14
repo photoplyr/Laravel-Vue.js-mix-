@@ -1,0 +1,18 @@
+.sortableTableHeader{
+    th.sortableHeader {
+        cursor: pointer;
+
+        .material-icons{
+            opacity: 0;
+            line-height: 0;
+            position: relative;
+            top: 6px;
+        }
+        &:hover .material-icons{
+            opacity: .5;
+        }
+        &.sortableHeaderActive .material-icons{
+            opacity: 1;
+        }
+    }
+}
